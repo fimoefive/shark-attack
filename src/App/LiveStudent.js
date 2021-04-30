@@ -16,7 +16,7 @@ function LiveStudent({ firstName, lastName }) {
   </div>;
 }
 
-LiveStudent.prototypes = {
+LiveStudent.propTypes = {
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
 };
