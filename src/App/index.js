@@ -9,14 +9,20 @@ import './App.scss';
 
 function App() {
   const [allStudents, setAllStudents] = useState([]);
-  const [deadStudents, setDeadStudents] = useState([])
+  const [deadStudents, setDeadStudents] = useState([]);
+
+  const attackButton = () => {
+    const [live, dead] = followTheLight();
+    setAllStudents(live);
+    setDeadStudents(dead);
+  };
 
   return (
     <div className='App'>
       <h1>SHARK ATTACK</h1>
       <br />
 
-      <Button color="danger" onClick={ }
+      <Button color="danger" onClick={attackButton}
         disabled={allStudents.length <= 0}
       >Shark Bite</Button>
 
