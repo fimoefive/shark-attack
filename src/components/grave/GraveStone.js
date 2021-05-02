@@ -10,7 +10,7 @@ function GraveStone({ firstName, lastName }) {
     <Card className="student-grave-card">
       <CardBody>
         <CardTitle tag="h4">{firstName} {lastName}</CardTitle>
-        <CardSubtitle tag="h5" className="mb-2 text-muted">Tomb Stone</CardSubtitle>
+        <CardSubtitle tag="h5">Tomb Stone</CardSubtitle>
       </CardBody>
     </Card>
   </div>;
