@@ -1,36 +1,18 @@
 import React, { useState } from 'react';
+import { liveStudents, dearlyBeloved } from '../helpers/data/studentsData';
 import './App.scss';
 
 function App() {
-  const [domWriting, setDomWriting] = useState('Nothing Here!');
-
-  const handleClick = (e) => {
-    console.warn(`You clicked ${e.target.id}`);
-    setDomWriting(`You clicked ${e.target.id}! Check the Console!`);
-  };
+  const [allStudents, setAllStudents] = useState(students);
 
   return (
     <div className='App'>
-      <h2>INSIDE APP COMPONENT</h2>
-      <div>
-        <button
-          id='this-button'
-          className='btn btn-info'
-          onClick={handleClick}
-        >
-          I am THIS button
-        </button>
-      </div>
-      <div>
-        <button
-          id='that-button'
-          className='btn btn-primary mt-3'
-          onClick={handleClick}
-        >
-          I am THAT button
-        </button>
-      </div>
-      <h3>{domWriting}</h3>
+      <h1>SHARK ATTACK</h1>
+      <br />
+
+      <h3>Shark Tank</h3>
+      <button onClick={ }>Shark Attack</button>
+      <h3>Graveyard</h3>
     </div>
   );
 }

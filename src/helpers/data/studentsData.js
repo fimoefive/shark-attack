@@ -147,4 +147,23 @@ const students = [
   },
 ];
 
-export default students;
+const livingStudents = () => {
+  const livingStudentsArr = students.filter((obj) => obj.isDead === false);
+  return livingStudentsArr;
+};
+
+const dearlyBeloved = () => {
+  const deadStudentsArr = students.filter((obj) => obj.isDead === true);
+  return deadStudentsArr;
+};
+
+const followTheLight = (array) => {
+  const studentsArr = array;
+  const randomStudent = Math.floor(Math.random() * studentsArr.length);
+  students[students.indexOf(randomStudent)].isDead = true;
+};
+
+export {
+  livingStudents, dearlyBeloved,
+  followTheLight,
+};

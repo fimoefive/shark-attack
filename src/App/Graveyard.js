@@ -14,7 +14,7 @@ function Graveyard({ deadStudents }) {
   );
 }
 
-Graveyard.PropTypes = {
+Graveyard.propTypes = {
   deadStudents: PropTypes.array
 };
 
