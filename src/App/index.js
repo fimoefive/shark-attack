@@ -13,6 +13,11 @@ function App() {
   const [allStudents, setAllStudents] = useState([]);
   const [deadStudents, setDeadStudents] = useState([]);
 
+  useEffect(() => {
+    setAllStudents(livingStudents());
+    setDeadStudents(dearlyBeloved());
+  }, []);
+
   const attackButton = () => {
     const [live, dead] = followTheLight();
     setAllStudents(live);

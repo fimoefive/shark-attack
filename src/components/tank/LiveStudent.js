@@ -5,20 +5,18 @@ import {
   CardTitle, CardSubtitle
 } from 'reactstrap';
 
-function LiveStudent({ firstName, lastName }) {
+const LiveStudent = ({ student }) => (
   <div>
     <Card className="student-card">
       <CardBody>
-        <CardTitle tag="h4">{firstName} {lastName}</CardTitle>
+        <CardTitle tag="h4">{student.firstName} {student.lastName}</CardTitle>
         <CardSubtitle tag="h5" className="mb-2 text-muted">Student of Sharks</CardSubtitle>
       </CardBody>
     </Card>
-  </div>;
-}
+  </div>);
 
 LiveStudent.propTypes = {
-  firstName: PropTypes.string.isRequired,
-  lastName: PropTypes.string.isRequired,
+  student: PropTypes.object.isRequired
 };
 
 export default LiveStudent;
