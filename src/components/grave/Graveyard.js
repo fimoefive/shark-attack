@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import GraveStone from './GraveStone';
 
-function Graveyard({ deadStudents }) {
+function GraveYard({ deadStudents }) {
   return (
     <div className="grave-container">
       {
@@ -14,8 +14,8 @@ function Graveyard({ deadStudents }) {
   );
 }
 
-Graveyard.propTypes = {
+GraveYard.propTypes = {
   deadStudents: PropTypes.array
 };
 
-export default Graveyard;
+export default GraveYard;
