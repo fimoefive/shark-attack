@@ -157,9 +157,9 @@ const dearlyBeloved = () => {
   return deadStudentsArr;
 };
 
-const followTheLight = (array) => {
-  const studentsArr = array;
-  const randomStudent = Math.floor(Math.random() * studentsArr.length);
+const followTheLight = () => {
+  const currentLiveStudents = livingStudents();
+  const randomStudent = currentLiveStudents[Math.floor(Math.random() * currentLiveStudents.length)];
   students[students.indexOf(randomStudent)].isDead = true;
 };
 
