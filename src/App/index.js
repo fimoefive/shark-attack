@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from 'reactstrap';
 import GraveYard from '../components/grave/Graveyard';
 import SharkTank from '../components/tank/SharkTank';
 import {
+  livingStudents,
+  dearlyBeloved,
   followTheLight
 } from '../helpers/data/studentsData';
 import './App.scss';
