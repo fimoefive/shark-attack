@@ -5,20 +5,21 @@ import {
   CardTitle, CardSubtitle
 } from 'reactstrap';
 
-function GraveStone({ firstName, lastName }) {
-  <div>
-    <Card className="student-grave-card">
-      <CardBody>
-        <CardTitle tag="h4">{firstName} {lastName}</CardTitle>
-        <CardSubtitle tag="h5">Tomb Stone</CardSubtitle>
-      </CardBody>
-    </Card>
-  </div>;
+function GraveStone({ studentObj }) {
+  return (
+    <div>
+      <Card className="student-card">
+        <CardBody>
+          <CardTitle tag="h4">{studentObj.firstName} {studentObj.lastName}</CardTitle>
+          <CardSubtitle tag="h5">Tomb Stone</CardSubtitle>
+        </CardBody>
+      </Card>
+    </div>
+  );
 }
 
 GraveStone.propTypes = {
-  firstName: PropTypes.string.isRequired,
-  lastName: PropTypes.string.isRequired,
+  studentObj: PropTypes.object.isRequired
 };
 
 export default GraveStone;

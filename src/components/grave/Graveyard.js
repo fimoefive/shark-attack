@@ -8,14 +8,14 @@ function GraveYard({ deadStudents }) {
       {
         deadStudents.map((studentObj) => (
           <GraveStone
-            key={studentObj.id} firstName={studentObj.firstName} lastName={studentObj.lastName} />
+            key={studentObj.id} studentObj={studentObj} />
         ))}
     </div>
   );
 }
 
 GraveYard.propTypes = {
-  deadStudents: PropTypes.array
+  deadStudents: PropTypes.array.isRequired
 };
 
 export default GraveYard;
