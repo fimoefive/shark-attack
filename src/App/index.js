@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'reactstrap';
-// import GraveYard from '../components/grave/Graveyard';
-// import SharkTank from '../components/tank/SharkTank';
 import {
   livingStudents,
   dearlyBeloved,
@@ -35,10 +33,8 @@ function App() {
       >Shark Bite</Button>
 
       <h3>Shark Tank</h3>
-      {/* <SharkTank allStudents={allStudents} /> */}
       <StudentList color='info' studentArray={allStudents} />
       <h3>Graveyard</h3>
-      {/* <GraveYard deadStudents={deadStudents} /> */}
       <StudentList color='secondary' studentArray={deadStudents} />
     </div>
   );

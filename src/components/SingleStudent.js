@@ -19,7 +19,7 @@ function SingleStudent({ student, color }) {
 }
 
 SingleStudent.propTypes = {
-  student: PropTypes.string.isRequired,
+  student: PropTypes.object.isRequired,
   color: PropTypes.string
 };
 
