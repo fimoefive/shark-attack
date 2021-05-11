@@ -162,7 +162,12 @@ const followTheLight = () => {
   return [livingStudents(), dearlyBeloved()];
 };
 
+const reset = () => {
+  students = students.map((student) => ({ ...student, isDead: false }));
+  return [livingStudents(), dearlyBeloved()];
+};
+
 export {
   livingStudents, dearlyBeloved,
-  followTheLight,
+  followTheLight, reset
 };
