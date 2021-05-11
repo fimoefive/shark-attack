@@ -146,12 +146,12 @@ let students = [
 ];
 
 const livingStudents = () => {
-  const livingStudentsArr = students.filter((obj) => obj.isDead === false);
+  const livingStudentsArr = students.filter((student) => !student.isDead);
   return livingStudentsArr;
 };
 
 const dearlyBeloved = () => {
-  const deadStudentsArr = students.filter((obj) => obj.isDead === true);
+  const deadStudentsArr = students.filter((student) => student.isDead);
   return deadStudentsArr;
 };
 
