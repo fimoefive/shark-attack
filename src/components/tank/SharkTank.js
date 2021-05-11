@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LiveStudent from './LiveStudent';
 
-function SharkTank({ allStudents }) {
+function SharkTank({ liveStudents }) {
   return (
     <div>
       {
-        allStudents.map((student) => (
+        liveStudents.map((student) => (
           <LiveStudent
             key={student.id} student={student} />
         ))}
@@ -15,7 +15,7 @@ function SharkTank({ allStudents }) {
 }
 
 SharkTank.propTypes = {
-  allStudents: PropTypes.array.isRequired
+  liveStudents: PropTypes.array.isRequired
 };
 
 export default SharkTank;

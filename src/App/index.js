@@ -10,17 +10,17 @@ import StudentList from '../components/StudentList';
 import './App.scss';
 
 function App() {
-  const [allStudents, setAllStudents] = useState([]);
+  const [liveStudents, setLiveStudents] = useState([]);
   const [deadStudents, setDeadStudents] = useState([]);
 
   useEffect(() => {
-    setAllStudents(livingStudents());
+    setLiveStudents(livingStudents());
     setDeadStudents(dearlyBeloved());
   }, []);
 
   const attackButton = () => {
     const [live, dead] = followTheLight();
-    setAllStudents(live);
+    setLiveStudents(live);
     setDeadStudents(dead);
   };
 
@@ -30,12 +30,12 @@ function App() {
       <br />
 
       <Button color="danger" onClick={attackButton}
-        disabled={allStudents.length <= 0}
+        disabled={liveStudents.length <= 0}
       >Shark Bite</Button>
       <Button onClick{...() => attackButton(reset)}>RESET</Button>
 
       <h3>Shark Tank</h3>
-      <StudentList color='info' studentArray={allStudents} />
+      <StudentList color='info' studentArray={liveStudents} />
 
       <h3>Graveyard</h3>
       <StudentList color='secondary' studentArray={deadStudents} />
