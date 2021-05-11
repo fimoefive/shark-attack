@@ -1,4 +1,4 @@
-const students = [
+let students = [
   {
     id: 1,
     firstName: 'Katy',
@@ -159,11 +159,13 @@ const followTheLight = () => {
   const currentLiveStudents = livingStudents();
   const randomStudent = currentLiveStudents[Math.floor(Math.random() * currentLiveStudents.length)];
   students[students.indexOf(randomStudent)].isDead = true;
+
   return [livingStudents(), dearlyBeloved()];
 };
 
 const reset = () => {
   students = students.map((student) => ({ ...student, isDead: false }));
+
   return [livingStudents(), dearlyBeloved()];
 };
 
