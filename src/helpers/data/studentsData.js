@@ -165,7 +165,6 @@ const followTheLight = () => {
 
 const reset = () => {
   students = students.map((student) => ({ ...student, isDead: false }));
-
   return [livingStudents(), dearlyBeloved()];
 };
 
