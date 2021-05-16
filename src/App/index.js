@@ -12,11 +12,6 @@ function App() {
   const [liveStudents, setLiveStudents] = useState(livingStudents());
   const [deadStudents, setDeadStudents] = useState([]);
 
-  // useEffect(() => {
-  //   setLiveStudents(livingStudents());
-  //   setDeadStudents(dearlyBeloved());
-  // }, []);
-
   const attackButton = (cb) => {
     const [live, dead] = cb();
     setLiveStudents(live);
@@ -30,11 +25,6 @@ function App() {
 
       <Button color="danger" onClick={() => attackButton(followTheLight)} disabled={liveStudents.length ? '' : 'disabled'}>{liveStudents.length ? 'Shark Attack' : 'ALL DEAD'}</Button>
 
-      {/* <Button color="danger" onClick={() => attackButton(followTheLight)}
-        disabled={liveStudents.length <= 0}
-      >Shark Bite</Button> */}
-
-      {/* <Button onClick{...() => attackButton(reset)}>RESET</Button> */}
       <Button color="info" onClick={() => attackButton(reset)}>RESET</Button>
       <br />
 
