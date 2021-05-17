@@ -23,7 +23,9 @@ function App() {
       <h1>SHARK ATTACK</h1>
       <br />
       {/* disabled={liveStudents.length ? '' : 'disabled'} */}
-      <Button color="danger" onClick={() => attackButton(followTheLight)} >{liveStudents.length ? 'Shark Attack' : 'ALL DEAD'}</Button>
+      <Button color="danger" onClick={() => attackButton(followTheLight)}
+        disabled={liveStudents.length <= 0}
+      >{liveStudents.length ? 'Shark Attack' : 'ALL DEAD'}</Button>
 
       <Button color="info" onClick={() => attackButton(reset)}>RESET</Button>
       <br />
