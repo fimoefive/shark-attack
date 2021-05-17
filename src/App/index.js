@@ -22,8 +22,8 @@ function App() {
     <div className='App'>
       <h1>SHARK ATTACK</h1>
       <br />
-
-      <Button color="danger" onClick={() => attackButton(followTheLight)} disabled={liveStudents.length ? '' : 'disabled'}>{liveStudents.length ? 'Shark Attack' : 'ALL DEAD'}</Button>
+      {/* disabled={liveStudents.length ? '' : 'disabled'} */}
+      <Button color="danger" onClick={() => attackButton(followTheLight)} >{liveStudents.length ? 'Shark Attack' : 'ALL DEAD'}</Button>
 
       <Button color="info" onClick={() => attackButton(reset)}>RESET</Button>
       <br />
