@@ -4,7 +4,7 @@ import SingleStudent from './SingleStudent';
 
 function StudentList({ studentArray, color = 'danger' }) {
   return (
-    <div>
+    <>
       {
         studentArray.map((studentObj) => (
           <SingleStudent
@@ -12,7 +12,7 @@ function StudentList({ studentArray, color = 'danger' }) {
             key={studentObj.id}
             student={studentObj} />
         ))}
-    </div>
+    </>
   );
 }
 

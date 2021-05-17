@@ -1,4 +1,4 @@
-const students = [
+let students = [
   {
     id: 1,
     firstName: 'Katy',
@@ -146,12 +146,12 @@ const students = [
 ];
 
 const livingStudents = () => {
-  const livingStudentsArr = students.filter((obj) => obj.isDead === false);
+  const livingStudentsArr = students.filter((student) => !student.isDead);
   return livingStudentsArr;
 };
 
 const dearlyBeloved = () => {
-  const deadStudentsArr = students.filter((obj) => obj.isDead === true);
+  const deadStudentsArr = students.filter((student) => student.isDead);
   return deadStudentsArr;
 };
 
@@ -159,10 +159,16 @@ const followTheLight = () => {
   const currentLiveStudents = livingStudents();
   const randomStudent = currentLiveStudents[Math.floor(Math.random() * currentLiveStudents.length)];
   students[students.indexOf(randomStudent)].isDead = true;
+
+  return [livingStudents(), dearlyBeloved()];
+};
+
+const reset = () => {
+  students = students.map((student) => ({ ...student, isDead: false }));
   return [livingStudents(), dearlyBeloved()];
 };
 
 export {
   livingStudents, dearlyBeloved,
-  followTheLight,
+  followTheLight, reset
 };

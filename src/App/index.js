@@ -1,25 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button } from 'reactstrap';
 import {
   livingStudents,
-  dearlyBeloved,
-  followTheLight
+  followTheLight,
+  reset
 } from '../helpers/data/studentsData';
 import StudentList from '../components/StudentList';
 import './App.scss';
 
 function App() {
-  const [allStudents, setAllStudents] = useState([]);
+  const [liveStudents, setLiveStudents] = useState(livingStudents());
   const [deadStudents, setDeadStudents] = useState([]);
 
-  useEffect(() => {
-    setAllStudents(livingStudents());
-    setDeadStudents(dearlyBeloved());
-  }, []);
-
-  const attackButton = () => {
-    const [live, dead] = followTheLight();
-    setAllStudents(live);
+  const attackButton = (cb) => {
+    const [live, dead] = cb();
+    setLiveStudents(live);
     setDeadStudents(dead);
   };
 
@@ -27,14 +22,20 @@ function App() {
     <div className='App'>
       <h1>SHARK ATTACK</h1>
       <br />
+      {/* disabled={liveStudents.length ? '' : 'disabled'} */}
+      <Button color="danger" onClick={() => attackButton(followTheLight)}
+        disabled={liveStudents.length <= 0}
+      >{liveStudents.length ? 'Shark Attack' : 'ALL DEAD'}</Button>
 
-      <Button color="danger" onClick={attackButton}
-        disabled={allStudents.length <= 0}
-      >Shark Bite</Button>
+      <Button color="info" onClick={() => attackButton(reset)}>RESET</Button>
+      <br />
 
       <h3>Shark Tank</h3>
-      <StudentList color='info' studentArray={allStudents} />
+      {/* {liveStudents.map((student) => student.firstName)} */}
+      <StudentList color='info' studentArray={liveStudents} />
+
       <h3>Graveyard</h3>
+      {/* {deadStudents.map((student) => student.firstName)} */}
       <StudentList color='secondary' studentArray={deadStudents} />
     </div>
   );
