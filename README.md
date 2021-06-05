@@ -4,6 +4,16 @@ This is just like the webpack template. Use it, create the repo, connect it to y
 
 - [Steps to deploy](https://github.com/nss-nightclass-projects/REACT-Deployment-Netlify)
 
+## LINKS
+
+### [Netlify](https://mjs-shark-attack.netlify.app)
+
+### [LOOM](https://www.loom.com/share/4dba2a631fdc4364b655a502c807b5b0)
+
+### Project Screenshots
+<img width="1674" alt="Shark Attack" src="https://user-images.githubusercontent.com/58958998/120895818-55585600-c5e4-11eb-905c-c318600dedc0.png">
+<img width="1680" alt="Shark Attack Dead" src="https://user-images.githubusercontent.com/58958998/120895823-5b4e3700-c5e4-11eb-870c-7a01cef91ca8.png">
+
 # Shark Attack
 Oh no your entire class has fallen into a pool infested with sharks and they are HUNGRY.
 
